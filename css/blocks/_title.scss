@@ -1,0 +1,28 @@
+.title {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--Orange, #fe7f00);
+  font-size: 88px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 42px;
+  position: relative;
+  line-height: 1.3;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    background-color: var(--Line, #D4D4D4);
+  }
+
+  &--two {
+    font-size: 48px;
+  }
+}
+
+

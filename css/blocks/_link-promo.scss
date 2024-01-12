@@ -1,0 +1,20 @@
+.link-promo {
+  display: flex;
+  align-items: center;
+  &__label {
+    display: block;
+    color: var(--White, #fff);
+    font-family: var(--Bebas);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    margin-inline: 16px;
+    flex-shrink: 0;
+  }
+  svg {
+    flex-shrink: 0;
+  }
+}

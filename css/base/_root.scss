@@ -1,2 +1,18 @@
-font-family: 'Bebas Neue', sans-serif;
-font-family: 'Inter', sans-serif;
+:root {
+  --Bebas: "Bebas Neue", sans-serif;
+  --Inter: "Inter", sans-serif;
+
+  --White: #ffffff;
+  --Dark: #1d1d1b;
+  --Dark-mod-1: rgba(29, 29, 27, 0.7);
+
+  --Line: #d4d4d4;
+  --LightGrey: #f2f2f2;
+  --Orange: #fe7f00;
+  --PinkRed: #cc1e4b;
+  --Yellow: #ffdd00;
+  --Orange-Yellow: #ffb00b;
+  --DeepPurple: #662d91;
+  --BrightGreen: #52ae27;
+  --VividRed: #db0707;
+}
