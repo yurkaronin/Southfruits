@@ -1,6 +1,7 @@
 .link-promo {
   display: flex;
   align-items: center;
+  max-width: max-content;
   &__label {
     display: block;
     color: var(--White, #fff);

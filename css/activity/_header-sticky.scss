@@ -1,0 +1,21 @@
+.header-sticky {
+  .header {
+
+    background: var(--White);
+    border-bottom: 1px solid var(--Line);
+  }
+  .header__wrapper {
+    border-bottom-color: transparent;
+  }
+  .header__logo {
+    max-width: 97px;
+    svg g,
+      svg defs path {
+        transition: fill 0.3s;
+        fill: var(--PinkRed);
+      }
+  }
+  .header__navigation a {
+    color: var(--Dark);
+  }
+}

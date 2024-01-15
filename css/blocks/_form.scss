@@ -1,0 +1,64 @@
+.form {
+  &__group {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &__item {
+    padding: 4px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid var(--Line, #d4d4d4);
+    transition: border 0.3s;
+  }
+
+  &__item:has(input:active),
+  &__item:has(input:focus),
+  &__item:has(textarea:active),
+  &__item:has(textarea:focus) {
+    border: 1px solid var(--Dark, #1d1d1b);
+  }
+  &__confurm {
+    label {
+      margin: 0;
+      position: relative;
+      padding-left: calc(16px + 32px);
+      cursor: pointer;
+    }
+    label::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 1px solid var(--Line, #D4D4D4);
+      transition: border 0.3s;
+
+    }
+    label::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: var(--White, #fff);
+      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2) inset;
+      width: 24px;
+      height: 24px;
+      border-radius: 8px;
+      top: -2px;
+      left: 4px;
+      // opacity: 0;
+      transition: background-color 0.3s;
+    }
+    input:checked + label::after {
+      background: var(--Orange, #fe7f00);
+      // opacity: 1;
+    }
+    // input:checked + label::before {
+    //   border: 1px solid var(--Dark, #1d1d1b);
+    // }
+  }
+}
