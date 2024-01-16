@@ -17,13 +17,11 @@
     line-height: 1.4;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    padding: 15px 48px;
+    padding: 6px 48px;
     background-color: transparent;
     text-align: center;
     border: none;
-    border-radius: 24px;
-
-    transition-property: background-color, color, border-radius;
+    transition-property: color;
     transition-duration: 0.3s;
     position: relative;
     &:after {
@@ -38,6 +36,20 @@
       opacity: 1;
       transition: opacity 0.3s;
     }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 24px;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+      pointer-events: none;
+      background-color: transparent;
+      z-index: 0;
+    }
 
     span {
       position: relative;
@@ -47,10 +59,17 @@
   a:hover,
   a:active,
   a:focus {
-    color: var(--Dark, #1d1d1b);
-    background-color: var(--Yellow, #fd0);
+    color: var(--PinkRed, #CC1E4B);
+
     &:after {
       opacity: 0 !important;
+    }
+    &:before {
+      background-color: var(--Yellow, #fd0);
+      left: -8px;
+      top: -8px;
+      bottom: -8px;
+      right: -8px;
     }
   }
   .off {

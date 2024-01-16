@@ -1,4 +1,52 @@
 .footer {
   background-color: var(--PinkRed);
   color: var(--White);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  &__wrapper {
+    display: grid;
+    gap: 32px;
+    align-items: center;
+    grid-template-columns: 3fr 6fr 3fr;
+  }
+
+  &__text {
+    color: var(--White, #fff);
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    a {
+      text-decoration: none;
+      color: var(--White);
+    }
+    span {
+      color: var(--Yellow, #fd0);
+    }
+    b {
+      font-weight: 700;
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 16px;
+      width: 48px;
+      transition: scale 0.3s;
+      &:hover,
+      &:active,
+      &:focus {
+        scale: 1.2;
+      }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
 }

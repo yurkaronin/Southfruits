@@ -376,12 +376,11 @@ input[type=radio].visually-hidden {
   line-height: 1.4;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  padding: 15px 48px;
+  padding: 6px 48px;
   background-color: transparent;
   text-align: center;
   border: none;
-  border-radius: 24px;
-  transition-property: background-color, color, border-radius;
+  transition-property: color;
   transition-duration: 0.3s;
   position: relative;
 }
@@ -397,6 +396,20 @@ input[type=radio].visually-hidden {
   opacity: 1;
   transition: opacity 0.3s;
 }
+.navigation a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 24px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 0;
+}
 .navigation a span {
   position: relative;
   z-index: 2;
@@ -404,13 +417,21 @@ input[type=radio].visually-hidden {
 .navigation a:hover,
 .navigation a:active,
 .navigation a:focus {
-  color: var(--Dark, #1d1d1b);
-  background-color: var(--Yellow, #fd0);
+  color: var(--PinkRed, #CC1E4B);
 }
 .navigation a:hover:after,
 .navigation a:active:after,
 .navigation a:focus:after {
   opacity: 0 !important;
+}
+.navigation a:hover:before,
+.navigation a:active:before,
+.navigation a:focus:before {
+  background-color: var(--Yellow, #fd0);
+  left: -8px;
+  top: -8px;
+  bottom: -8px;
+  right: -8px;
 }
 .navigation .off:after {
   display: none;
@@ -482,11 +503,20 @@ input[type=radio].visually-hidden {
   height: 32px;
   margin-left: 16px;
 }
+.header__social * {
+  transition: all 0.3s;
+}
 .header__social:hover {
   color: var(--Dark);
 }
 .header__social:hover svg {
-  scale: 1.2;
+  scale: 1.3;
+}
+.header__social.whatsapp:hover circle, .header__social.whatsapp:focus circle, .header__social.whatsapp:active circle {
+  fill: var(--White);
+}
+.header__social.whatsapp:hover path, .header__social.whatsapp:focus path, .header__social.whatsapp:active path {
+  fill: #54AE39;
 }
 .header__button {
   display: none;
@@ -495,6 +525,46 @@ input[type=radio].visually-hidden {
 .footer {
   background-color: var(--PinkRed);
   color: var(--White);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer__wrapper {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  grid-template-columns: 3fr 6fr 3fr;
+}
+.footer__text {
+  color: var(--White, #fff);
+  text-align: right;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.footer__text a {
+  text-decoration: none;
+  color: var(--White);
+}
+.footer__text span {
+  color: var(--Yellow, #fd0);
+}
+.footer__text b {
+  font-weight: 700;
+}
+.footer__link {
+  display: flex;
+  align-items: center;
+}
+.footer__link svg {
+  margin-left: 16px;
+  width: 48px;
+  transition: scale 0.3s;
+}
+.footer__link svg:hover, .footer__link svg:active, .footer__link svg:focus {
+  scale: 1.2;
+}
+.footer__link:hover span, .footer__link:active span, .footer__link:focus span {
+  text-decoration: underline;
 }
 
 .header-sticky .header {

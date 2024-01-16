@@ -67,11 +67,25 @@
     width: 32px;
     height: 32px;
     margin-left: 16px;
+    * {
+      transition: all 0.3s;
+    }
     &:hover {
       color: var(--Dark);
 
       svg {
-        scale: 1.2;
+        scale: 1.3;
+      }
+    }
+
+    &.whatsapp:hover,
+    &.whatsapp:focus,
+    &.whatsapp:active {
+      circle {
+        fill: var(--White);
+      }
+      path {
+        fill: #54AE39;
       }
     }
   }
