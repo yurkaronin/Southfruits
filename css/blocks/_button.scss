@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   max-width: max-content;
+  overflow: visible;
   border: none;
   background-color: transparent;
   color: var(--White);
@@ -83,8 +84,21 @@
     }
   }
   &--square {
-    padding: 25px;
+    padding: 25px 30px;
     width: 65px;
     height: 65px;
+  }
+  &--play {
+    padding: 25px 43px;
+    width: 120px;
+    height: 120px;
+    &::before {
+      background-color: var(--Red);
+    }
+    svg {
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
   }
 }

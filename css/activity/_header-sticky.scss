@@ -1,14 +1,16 @@
 .header-sticky {
   .header {
 
-    background: var(--White);
-    border-bottom: 1px solid var(--Line);
+    background: var(--White) !important;
+    border-bottom: 1px solid var(--Line-mod);
   }
   .header__wrapper {
     border-bottom-color: transparent;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   .header__logo {
-    max-width: 97px;
+    max-width: 90px;
     svg g,
       svg defs path {
         transition: fill 0.3s;

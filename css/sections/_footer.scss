@@ -3,6 +3,8 @@
   color: var(--White);
   padding-top: 20px;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 50;
   &__wrapper {
     display: grid;
     gap: 32px;

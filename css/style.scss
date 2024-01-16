@@ -5,6 +5,9 @@
 @import "blocks/visually-hidden";
 
 @import "blocks/content";
+@import "blocks/section";
+@import "blocks/swiper";
+@import "blocks/main";
 @import "blocks/title";
 @import "blocks/subtitle";
 @import "blocks/wrapper";
@@ -12,8 +15,15 @@
 @import "blocks/link-promo";
 @import "blocks/form";
 @import "blocks/navigation";
+@import "blocks/hero-slider";
+@import "blocks/product-features";
+@import "blocks/video";
+@import "blocks/advantages";
 
 @import "sections/header";
 @import "sections/footer";
+@import "sections/hero";
+@import "sections/promo-card";
+@import "sections/about";
 
 @import "activity/header-sticky";

@@ -1,0 +1,7 @@
+.main {
+  min-height: calc(100vh - 88px);
+  padding-top: 126px;
+  &--normal {
+    padding-top: 0;
+  }
+}
