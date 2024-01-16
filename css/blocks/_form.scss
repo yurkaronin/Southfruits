@@ -4,6 +4,17 @@
     gap: 32px;
     grid-template-columns: repeat(3, 1fr);
   }
+  &__group &__item--mod {
+    grid-column: span 3;
+  }
+  &__body {
+    margin-bottom: 40px;
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__item {
     padding: 4px;
     max-width: 100%;
@@ -11,6 +22,9 @@
     border-radius: 24px;
     border: 1px solid var(--Line, #d4d4d4);
     transition: border 0.3s;
+    &:has(> textarea) {
+      padding-bottom: 0;
+    }
   }
 
   &__item:has(input:active),
@@ -50,15 +64,10 @@
       border-radius: 8px;
       top: -2px;
       left: 4px;
-      // opacity: 0;
       transition: background-color 0.3s;
     }
     input:checked + label::after {
       background: var(--Orange, #fe7f00);
-      // opacity: 1;
     }
-    // input:checked + label::before {
-    //   border: 1px solid var(--Dark, #1d1d1b);
-    // }
   }
 }
