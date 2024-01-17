@@ -24,6 +24,7 @@
     display: grid;
     gap: 32px;
     grid-template-columns: 4fr 8fr;
+    align-items: center;
   }
   &__grid-right {
     margin-left: auto;
@@ -57,10 +58,13 @@
   }
 
   @media (max-width: 1399px) {
+    padding-top: 80px;
+    padding-bottom: 90px;
     &__grid {
       grid-template-columns: 5fr 7fr;
     }
   }
+  @media (max-width: 1200px) {}
   @media (max-width: 1023px) {
     padding-top: 40px;
     padding-bottom: 50px;

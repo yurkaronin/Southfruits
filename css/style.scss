@@ -1,6 +1,7 @@
 @import "base/fonts";
 @import "base/root";
 @import "base/global";
+@import "base/support";
 
 @import "blocks/visually-hidden";
 
@@ -31,6 +32,7 @@
 @import "sections/promo-card";
 @import "sections/about";
 @import "sections/mob-nav";
+@import "sections/product-details";
 
 @import "activity/header-sticky";
 @import "activity/menu-open";
