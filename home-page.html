@@ -72,10 +72,55 @@
             </svg>
           </a>
         </div>
-        <div class="header__button"></div>
+        <button class="button-menu" type="button">
+          <span class="button-menu__toggle"></span>
+        </button>
       </div>
     </div>
+    <!-- мобильное меню  -->
+    <div class="mob-nav">
+      <ul class="mob-nav__list">
+        <li class="mob-nav__item">
+          <a class="mob-nav__link" href="#">
+            <span>Продукция</span>
+            <span class="mob-nav__icon">
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="2" />
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav__link" href="#"><span>Сотрудничество</span>
+            <span class="mob-nav__icon">
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="2" />
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav__link" href="#"><span>О компании</span>
+            <span class="mob-nav__icon">
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="2" />
+              </svg>
+            </span>
+          </a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav__link" href="#"><span>Контакты</span>
+            <span class="mob-nav__icon">
+              <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L9 9L1 17" stroke="white" stroke-width="2" />
+              </svg>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
+
   <main class="main main--normal">
 
     <section class="hero">
@@ -94,25 +139,29 @@
           <div class="hero-slider__footer">
             <div class="wrapper">
               <div class="hero-slider__footer-grid">
-                <a class="link-promo" href="#">
-                  <span class="button button--yellow button--square"><svg xmlns="http://www.w3.org/2000/svg" width="18"
-                      height="11" fill="none">
-                      <path stroke="#CC1E4B" stroke-width="2" d="M17 1 9 9 1 1" />
-                    </svg></span>
+                <a class="link-promo" href="#scroll-to">
+                  <span class="button-custom button-custom--yellow">
+                    <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17 1L9 9L1 0.999999" stroke="#CC1E4B" stroke-width="2" />
+                    </svg>
+
+                  </span>
                   <span class="link-promo__label">скрольте вниз</span>
                 </a>
                 <div class="hero-slider__navigation">
                   <div class="hero-slider__pagination swiper-pagination">1 из 3</div>
                   <div class="hero-slider__buttons">
-                    <button class="button button--square button--white swiper-button-prev" type="button">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18" fill="none">
-                        <path stroke="#CC1E4B" stroke-width="2" d="M10 1 2 9l8 8" />
+                    <button class="button-custom swiper-button-prev" type="button">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 1L2 9L10 17" stroke="#CC1E4B" stroke-width="2" />
                       </svg>
+
                     </button>
-                    <button class="button button--square button--white swiper-button-next">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 18" fill="none">
-                        <path stroke="#CC1E4B" stroke-width="2" d="m1 1 8 8-8 8" />
+                    <button class="button-custom swiper-button-next">
+                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L9 9L1 17" stroke="#CC1E4B" stroke-width="2" />
                       </svg>
+
                     </button>
                   </div>
                 </div>
@@ -127,7 +176,7 @@
 
     </section>
     <!-- Личи ананас  -->
-    <section class="promo-card" style="background-image: url(./img/promo-card/1.jpg);">
+    <section class="promo-card" id="scroll-to" style="background-image: url(./img/promo-card/1.jpg);">
       <div class="wrapper">
         <div class="promo-card__grid">
           <div class="promo-card__grid-left">
@@ -279,12 +328,16 @@
               <li class="advantages__item">
                 <span class="advantages__icon">
                   <svg width="36" height="41" viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.224 7H22" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M27 7H34.777" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M1 1V5C1 9.971 4.029 14 9 14H9.23C10.164 14 10.967 14.648 11.174 15.558C11.882 18.674 14.669 21 18 21C21.331 21 24.118 18.674 24.826 15.558C25.033 14.648 25.836 14 26.77 14H27C31.971 14 35 9.971 35 5V1H1Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M18 21V40" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M12 40H24" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    </svg>
+                    <path d="M1.224 7H22" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" />
+                    <path d="M27 7H34.777" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" />
+                    <path
+                      d="M1 1V5C1 9.971 4.029 14 9 14H9.23C10.164 14 10.967 14.648 11.174 15.558C11.882 18.674 14.669 21 18 21C21.331 21 24.118 18.674 24.826 15.558C25.033 14.648 25.836 14 26.77 14H27C31.971 14 35 9.971 35 5V1H1Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M18 21V40" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M12 40H24" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                  </svg>
 
                 </span>
                 <span>Пример преимущества</span>
@@ -292,17 +345,34 @@
               <li class="advantages__item">
                 <span class="advantages__icon">
                   <svg width="39" height="49" viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 47.0291H12C10.343 47.0291 9 45.6861 9 44.0291V15.0291H27V44.0291C27 45.6861 25.657 47.0291 24 47.0291Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M28.625 2.85693L37.162 13.8169L34.562 14.9299L32.148 12.8859L29.92 13.0709L28.436 11.3989L25.278 11.2119L22.865 9.16794L20.637 9.35193L19.152 7.67993L15.996 7.49294L14.883 4.89293L28.625 2.85693Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M25.278 11.2119L19 28.0289" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M28.625 2.85701L29.369 1" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M19.0003 34.0266L16.0001 31.0264L12.9999 34.0266L16.0001 37.0268L19.0003 34.0266Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20 42.0291L21 43.0291L24 40.0291L21 37.0291L20 38.0291" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M13.593 38.4351L12 40.0291L15 43.0291L18 40.0291" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20 23.0291H9" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M24 23.0291H27" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9 19.6871C8.375 19.9091 7.701 20.0291 7 20.0291C3.687 20.0291 1 17.3421 1 14.0291C1 10.7161 3.687 8.02905 7 8.02905C10.313 8.02905 13 10.7161 13 14.0291C13 14.3651 12.972 14.695 12.919 15.015" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <path
+                      d="M24 47.0291H12C10.343 47.0291 9 45.6861 9 44.0291V15.0291H27V44.0291C27 45.6861 25.657 47.0291 24 47.0291Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M28.625 2.85693L37.162 13.8169L34.562 14.9299L32.148 12.8859L29.92 13.0709L28.436 11.3989L25.278 11.2119L22.865 9.16794L20.637 9.35193L19.152 7.67993L15.996 7.49294L14.883 4.89293L28.625 2.85693Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M25.278 11.2119L19 28.0289" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M28.625 2.85701L29.369 1" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M19.0003 34.0266L16.0001 31.0264L12.9999 34.0266L16.0001 37.0268L19.0003 34.0266Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M20 42.0291L21 43.0291L24 40.0291L21 37.0291L20 38.0291" stroke="white" stroke-width="2"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M13.593 38.4351L12 40.0291L15 43.0291L18 40.0291" stroke="white" stroke-width="2"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20 23.0291H9" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M24 23.0291H27" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M9 19.6871C8.375 19.9091 7.701 20.0291 7 20.0291C3.687 20.0291 1 17.3421 1 14.0291C1 10.7161 3.687 8.02905 7 8.02905C10.313 8.02905 13 10.7161 13 14.0291C13 14.3651 12.972 14.695 12.919 15.015"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
 
                 </span>
                 <span>Пример преимущества</span>
@@ -310,17 +380,27 @@
               <li class="advantages__item">
                 <span class="advantages__icon">
                   <svg width="28" height="48" viewBox="0 0 28 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10C3.842 15.095 1 20.986 1 27C1 33.39 8.091 38 14 38C19.909 38 27 33.39 27 27C27 20.986 24.158 15.095 21 10H7Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M5 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M23 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M14 38V47" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
-                    <path d="M17.776 34.167L12 3L4 1" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M2.50299 19H11.333" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.966 19H25.498" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14 29.98L9.29199 27.75C8.46599 30.5 9.04199 32.589 11.291 33.91C12.283 34.493 13.401 34.67 14.456 34.491" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M5.71399 27.313L7.009 23.405L11.217 24.799" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M20.25 29.916L23.267 28.916L21.379 23.2209L18.815 24" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+                    <path
+                      d="M7 10C3.842 15.095 1 20.986 1 27C1 33.39 8.091 38 14 38C19.909 38 27 33.39 27 27C27 20.986 24.158 15.095 21 10H7Z"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M5 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M23 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M14 38V47" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                    <path d="M17.776 34.167L12 3L4 1" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2.50299 19H11.333" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M14.966 19H25.498" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M14 29.98L9.29199 27.75C8.46599 30.5 9.04199 32.589 11.291 33.91C12.283 34.493 13.401 34.67 14.456 34.491"
+                      stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path d="M5.71399 27.313L7.009 23.405L11.217 24.799" stroke="white" stroke-width="2"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M20.25 29.916L23.267 28.916L21.379 23.2209L18.815 24" stroke="white" stroke-width="2"
+                      stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
 
                 </span>
                 <span>Пример преимущества</span>
@@ -345,10 +425,147 @@
     </section>
     <section class="section">
       <div class="wrapper">
-        <h2 class="title title--two">Частые вопросы</h2>
+        <h2 class="title title--white title--mod">Частые вопросы</h2>
         <div class="faq">
           <ul class="faq__list">
-            <li class="faq__item"></li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
+            <li class="faq__item">
+              <div class="accordion">
+                <div class="accordion__head">
+                  <div class="marker"><span>?</span></div>
+                  <div class="accordion__title">пример часто задаваемого вопроса</div>
+                  <span class="accordion__icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="14" width="4" height="32" fill="#FFB00B" />
+                      <rect x="32" y="14" width="4" height="32" transform="rotate(90 32 14)" fill="#FFB00B" />
+                    </svg>
+
+                  </span>
+                </div>
+                <div class="accordion__body">
+                  <div class="marker marker--orange"><span>!</span></div>
+                  Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо
+                  комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими
+                  ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно
+                  различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои
+                  собственные интерпретации старых и более известных коктейлей.
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>

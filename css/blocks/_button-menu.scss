@@ -1,0 +1,72 @@
+.button-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--White);
+  width: 45px;
+  height: 45px;
+  border: none;
+  padding: 0;
+  max-width: initial;
+  max-height: initial;
+  min-height: initial;
+  background-color: transparent;
+  flex-shrink: 0;
+
+  &::before {
+    content: "";
+    background-color: rgba(0,0,0,0);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 45 45' fill='none'%3e%3cpath d='M22.6366 0H22.5546C4.40779 0 0.068306 4.30014 0 22.3292C0.068306 40.8228 4.18921 45 22.4727 45C40.8381 45 44.9317 40.8228 45 22.3292C44.918 4.09516 40.8245 0 22.6366 0Z' fill='%23CC1E4B'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  & span,
+  & span::after,
+  & span::before {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: var(--White);
+    z-index: 2;
+  }
+  & span::after,
+  & span::before {
+    content: "";
+    display: block;
+    transition: 0.3s;
+  }
+  & span::before {
+    transform: translateY(-8px);
+  }
+  & span::after {
+    transform: translateY(8px);
+  }
+  &.isActive span {
+    height: 0;
+  }
+  &.isActive span:before {
+    transform: rotate(-45deg);
+  }
+  &.isActive span:after {
+    transform: rotate(45deg);
+  }
+
+  &.button-custom:hover::before {
+    scale: 1.15;
+}
+
+  @media (max-width: 374px) {
+    width: 45px;
+    height: 45px;
+  }
+}

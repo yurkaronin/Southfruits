@@ -19,9 +19,16 @@
     left: 0;
     background-color: var(--Line, #D4D4D4);
   }
+  &--white {
+    color: var(--White);
+  }
 
   &--two {
     font-size: 48px;
+  }
+  &--mod {
+    max-width: max-content;
+    padding-right: 64px;
   }
 }
 
