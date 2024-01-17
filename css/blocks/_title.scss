@@ -17,7 +17,7 @@
     height: 1px;
     position: absolute;
     left: 0;
-    background-color: var(--Line, #D4D4D4);
+    background-color: var(--Line-mod, #D4D4D4);
   }
   &--white {
     color: var(--White);
@@ -29,6 +29,15 @@
   &--mod {
     max-width: max-content;
     padding-right: 64px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 64px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 40px;
+    padding-bottom: 21px;
   }
 }
 

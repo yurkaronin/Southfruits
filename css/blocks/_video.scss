@@ -27,10 +27,25 @@
     position: absolute;
     top: 0;
     left: 0;
-
   }
-  .button {
+  .play-button {
     position: relative;
     z-index: 2;
+  }
+
+  @media (max-width: 1200px) {
+    border-radius: 0;
+    height: 768px;
+
+    img {
+      object-position: center;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    height: 576px;
+  }
+  @media (max-width: 767px) {
+    height: 280px;
   }
 }

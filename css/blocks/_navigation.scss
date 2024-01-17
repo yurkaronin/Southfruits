@@ -73,7 +73,7 @@
     }
   }
   a.current {
-    color: var(--Dark, #1D1D1B);
+    color: var(--Dark, #1d1d1b);
     &:before {
       background-color: var(--Yellow, #fd0);
       left: -8px;
@@ -94,9 +94,14 @@
     }
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1200px) {
     a {
       padding: 6px 16px;
+      // font-size: 16px;
+    }
+  }
+  @media (max-width: 1023px) {
+    a {
       font-size: 16px;
     }
   }

@@ -12,7 +12,7 @@
   border: none;
   background-color: transparent;
   color: var(--White);
-  padding: 25px 40px;
+  padding: 22px 40px;
   flex-shrink: 0;
   font-family: var(--Bebas);
   font-size: 20px;
@@ -84,22 +84,56 @@
     }
   }
   &--square {
-    padding: 25px 30px;
     width: 65px;
     height: 65px;
   }
-  &--play {
-    padding: 25px 43px;
-    width: 120px;
-    height: 120px;
+
+  @media (max-width: 767px) {
+    padding: 17px 40px 14px;
+    font-size: 16px;
+  }
+}
+
+.play-button {
+  width: 120px;
+  height: 120px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M60.3643 0H60.1457C11.7541 0 0.182149 11.467 0 59.5445C0.182149 108.861 11.1712 120 59.9271 120C108.902 120 119.818 108.861 120 59.5445C119.781 10.9204 108.865 0 60.3643 0Z' fill='%23DB0707'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+  }
+  svg {
+    position: relative;
+    z-index: 2;
+    max-width: 27px;
+    flex-shrink: 0;
+  }
+
+  &:hover {
     &::before {
-      background-color: var(--Red);
+      scale: 1.15;
     }
-    svg {
-      position: relative;
-      z-index: 2;
-      flex-shrink: 0;
-    }
+  }
+
+  @media (max-width: 767px) {
+    width: 80px;
+    height: 80px;
   }
 }
 

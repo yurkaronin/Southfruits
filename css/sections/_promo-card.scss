@@ -1,13 +1,25 @@
 .promo-card {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   color: var(--Dark, #1d1d1b);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   padding-top: 170px;
   padding-bottom: 165px;
+  position: relative;
+  &__photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
   &__grid {
     display: grid;
     gap: 32px;
@@ -15,6 +27,12 @@
   }
   &__grid-right {
     margin-left: auto;
+    position: relative;
+    z-index: 2;
+  }
+  &__grid-left {
+    position: relative;
+    z-index: 2;
   }
   &__logo {
     margin-bottom: 40px;
@@ -28,13 +46,69 @@
     margin-bottom: 42px;
   }
   &__buttons {
-    display: flex;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    .button {
-      flex-shrink: 0;
+    max-width: max-content;
+  }
+  &__group {
+    display: contents;
+  }
+
+  @media (max-width: 1399px) {
+    &__grid {
+      grid-template-columns: 5fr 7fr;
     }
-    .button + .button {
-      margin-left: 24px;
+  }
+  @media (max-width: 1023px) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background: linear-gradient(to bottom, #fe7f00, #fe7f00 50%, #ffb00b 50%);
+    .wrapper {
+      padding-inline: 0;
+    }
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+    &__photo {
+      position: relative;
+    }
+    &__grid-right {
+      margin-right: auto;
+      padding-inline: 40px;
+    }
+    &__grid-left {
+      padding-inline: 40px;
+      display: grid;
+      gap: 0 32px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__group {
+      display: block;
+    }
+    &__buttons {
+      // grid-column-start: 2;
+      gap: 16px;
+      // max-width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    background: linear-gradient(to bottom, #fe7f00, #fe7f00 60%, #ffb00b 50%);
+    &__grid-right {
+      padding-inline: 20px;
+    }
+    &__grid-left {
+      padding-inline: 20px;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+    .promo-card__grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+  }
+    .promo-card__buttons {
+      grid-column-start: initial;
     }
   }
 }

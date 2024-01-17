@@ -24,7 +24,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     position: relative;
     width: 80px;
     height: 80px;
@@ -39,7 +38,7 @@
       right: 0;
       transition: all 0.3s ease-in-out;
       pointer-events: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80' fill='none'%3e%3cpath d='M40.2429 0H40.0971C7.83607 0 0.121433 7.6447 0 39.6963C0.121433 72.5739 7.44748 80 39.9514 80C72.6011 80 79.8786 72.5739 80 39.6963C79.8543 7.28029 72.5768 0 40.2429 0Z' fill='%23FFB00B'/%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' fill='none'%3e%3cpath d='M40.2429 0H40.0971C7.83607 0 0.121433 7.6447 0 39.6963C0.121433 72.5739 7.44748 80 39.9514 80C72.6011 80 79.8786 72.5739 80 39.6963C79.8543 7.28029 72.5768 0 40.2429 0Z' fill='%23FFB00B'/%3e%3c/svg%3e");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -47,9 +46,24 @@
     svg {
       z-index: 2;
       position: relative;
+      max-width: 26px;
     }
     &:hover::before {
       scale: 1.15;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .advantages__list {
+      gap: 20px;
+      grid-template-columns: 1fr;
+    }
+    .advantages__item {
+      font-size: 16px;
+    }
+    &__icon {
+      width: 60px;
+      height: 60px;
     }
   }
 }

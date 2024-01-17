@@ -7,9 +7,11 @@
   gap: 0;
   grid-template-columns: 1fr 2fr;
   align-items: center;
+
   .wrapper {
     display: contents;
   }
+
   .content {
     padding-top: 80px;
     padding-right: 64px;
@@ -37,5 +39,31 @@
   &__text {
     margin-bottom: 42px;
     margin-top: 0;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    margin: 0;
+    .wrapper {
+      display: block;
+      order: 2;
+    }
+
+    .content {
+      margin: 0;
+      margin-top: -48px;
+      border-radius: 48px;
+      padding: 60px 65px;
+      max-width: 100%;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .content {
+      padding: 30px 25px;
+    }
   }
 }
