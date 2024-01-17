@@ -55,17 +55,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    svg {
-      flex-shrink: 0;
+    position: relative;
+    &::before {
+      display: block;
+      position: absolute;
+      content: "";
+      top: initial;
+      left: 25px;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
       width: 32px;
-      rect {
-        transition: all 0.3s;
-
-      }
+      height: 4px;
+      background-color: var(--Orange-Yellow);
     }
-    // &:hover {
-    //   scale: 1.2;
-    // }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      top: initial;
+      left: 25px;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      width: 32px;
+      height: 4px;
+      background-color: var(--Orange-Yellow);
+      -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg)
+    }
   }
   &:hover,
   &:active,
@@ -97,13 +117,11 @@
     opacity: 1;
     max-height: 1200px;
     will-change: opacity, max-height;
-    overflow: auto;
+    overflow: initial;
   }
   .accordion__icon {
-    rect:first-of-type {
-      transform: rotate(-90deg);
-      // opacity: 0;
-      transform-origin: center;
+    &::after {
+      transform: rotate(0);
     }
   }
 }

@@ -1138,13 +1138,36 @@ input[type=radio].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-.accordion__icon svg {
-  flex-shrink: 0;
+.accordion__icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: initial;
+  left: 25px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   width: 32px;
+  height: 4px;
+  background-color: var(--Orange-Yellow);
 }
-.accordion__icon svg rect {
-  transition: all 0.3s;
+.accordion__icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: initial;
+  left: 25px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  width: 32px;
+  height: 4px;
+  background-color: var(--Orange-Yellow);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .accordion:hover::before, .accordion:active::before, .accordion:focus::before {
   left: -4px;
@@ -1172,11 +1195,10 @@ input[type=radio].visually-hidden {
   opacity: 1;
   max-height: 1200px;
   will-change: opacity, max-height;
-  overflow: auto;
+  overflow: initial;
 }
-.active .accordion__icon rect:first-of-type {
-  transform: rotate(-90deg);
-  transform-origin: center;
+.active .accordion__icon::after {
+  transform: rotate(0);
 }
 
 .header {
@@ -1192,8 +1214,8 @@ input[type=radio].visually-hidden {
   opacity: 0;
 }
 .header--mod .header__wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   max-width: max-content;
   justify-content: center;
   margin: 0 auto;
@@ -1201,7 +1223,7 @@ input[type=radio].visually-hidden {
 .header__wrapper {
   display: grid;
   gap: 32px;
-  grid-template-columns: 130px 1fr auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   border-bottom: 1px solid var(--Line-mod);
   padding-top: 8px;
@@ -1212,6 +1234,9 @@ input[type=radio].visually-hidden {
   display: block;
   max-width: 126px;
   transition: all 0.3s;
+}
+.header__logo svg {
+  width: 100%;
 }
 .header__logo svg g,
 .header__logo svg defs path {
@@ -1256,6 +1281,9 @@ input[type=radio].visually-hidden {
   height: 32px;
   margin-left: 16px;
 }
+.header__social svg {
+  max-width: 32px;
+}
 .header__social * {
   transition: all 0.3s;
 }
@@ -1276,11 +1304,11 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 1023px) {
   .header .header__logo {
-    max-width: 78px;
+    max-width: 70px;
   }
   .header .header__wrapper {
     gap: 12px;
-    grid-template-columns: 78px 1fr auto;
+    grid-template-columns: auto 1fr auto;
   }
   .header .header__social {
     margin-left: 8px;
@@ -1291,7 +1319,7 @@ input[type=radio].visually-hidden {
 }
 @media (max-width: 767px) {
   .header .header__wrapper {
-    grid-template-columns: 78px 1fr 45px;
+    grid-template-columns: auto 1fr 45px;
   }
   .header--mod .header__wrapper {
     max-width: 100%;
