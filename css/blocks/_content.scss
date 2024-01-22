@@ -11,4 +11,7 @@
   &--mod {
     background: transparent;
   }
+  @media (max-width: 767px) {
+    padding: 25px 30px;
+  }
 }

@@ -2,4 +2,24 @@
   height: 100vh;
   position: relative;
   background-color: var(--Orange-Yellow);
+  margin-bottom: -190px;
+}
+
+.hero--static {
+  position: relative;
+  .wrapper {
+    display: contents;
+  }
+  .hero__image-bg {
+    img {
+      display: block;
+      // position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
 }

@@ -71,6 +71,13 @@ a:not([class]) {
   color: var(--Orange, #fe7f00);
   font-style: normal;
   text-decoration-line: underline;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--PinkRed, #CC1E4B);
+  }
 }
 
 input,

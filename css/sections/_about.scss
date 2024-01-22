@@ -41,6 +41,12 @@
     margin-top: 0;
   }
 
+  .video {
+    border-radius: 48px 0 0 48px;
+    height: 832px;
+    margin-bottom: 0;
+  }
+
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;
     margin: 0;

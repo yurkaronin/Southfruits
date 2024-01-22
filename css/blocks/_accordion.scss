@@ -61,7 +61,7 @@
       position: absolute;
       content: "";
       top: initial;
-      left: 25px;
+      // left: 25px;
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
@@ -75,7 +75,7 @@
       position: absolute;
       content: "";
       top: initial;
-      left: 25px;
+      // left: 25px;
       -webkit-transition: .3s;
       -o-transition: .3s;
       transition: .3s;
@@ -108,12 +108,20 @@
       gap: 14px;
       grid-template-columns: 40px 1fr 40px;
     }
+    .accordion__body {
+      display: block;
+    }
+    .accordion__body .marker {
+      display: none;
+    }
   }
 }
 
 .active {
   .accordion__body {
     padding-top: 33px;
+    padding-left: 32px;
+    padding-bottom: 16px;
     opacity: 1;
     max-height: 1200px;
     will-change: opacity, max-height;
@@ -122,6 +130,13 @@
   .accordion__icon {
     &::after {
       transform: rotate(0);
+    }
+  }
+  @media (max-width: 767px) {
+    .accordion__body {
+      padding: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
   }
 }

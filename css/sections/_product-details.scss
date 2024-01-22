@@ -1,8 +1,14 @@
 .product-details {
   position: relative;
-  margin-top: -195px;
+  margin-top: -130px;
+  margin-bottom: 80px;
   .content {
     margin-top: 0;
     margin-bottom: 0;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding-top: 0;
   }
 }

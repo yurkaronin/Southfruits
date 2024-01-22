@@ -6,7 +6,6 @@
 @import "blocks/visually-hidden";
 
 @import "blocks/content";
-@import "blocks/inner-page";
 @import "blocks/button-menu";
 @import "blocks/section";
 @import "blocks/swiper";
@@ -14,6 +13,7 @@
 @import "blocks/title";
 @import "blocks/subtitle";
 @import "blocks/wrapper";
+@import "blocks/container";
 @import "blocks/button";
 @import "blocks/link-promo";
 @import "blocks/form";
@@ -33,6 +33,12 @@
 @import "sections/about";
 @import "sections/mob-nav";
 @import "sections/product-details";
+@import "sections/faq-section";
+@import "sections/photo-slider";
+
+@import "pages/inner-page";
+@import "pages/simple-page";
+@import "pages/home-page";
 
 @import "activity/header-sticky";
 @import "activity/menu-open";
