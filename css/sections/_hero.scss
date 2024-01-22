@@ -1,8 +1,26 @@
 .hero {
-  height: 100vh;
+  min-height: 1080px;
   position: relative;
   background-color: var(--Orange-Yellow);
   margin-bottom: -190px;
+
+  @media (max-width: 1600px) {
+    margin-bottom: -65px;
+    min-height: 895px;
+  }
+
+  @media (max-width: 1399px) {
+    margin-bottom: -65px;
+    min-height: 768px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-bottom: 0;
+    min-height: 1024px;
+  }
+  @media (max-width: 767px) {
+    min-height: 665px;
+  }
 }
 
 .hero--static {
