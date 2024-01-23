@@ -12,8 +12,8 @@
       opacity: 0;
     }
     .header__wrapper {
-      padding-top: 32px;
-      padding-bottom: 32px;
+      padding-top: 16px;
+      padding-bottom: 16px;
       max-width: max-content;
       justify-content: center;
       margin: 0 auto;
@@ -115,7 +115,7 @@
 
   @media (max-width: 1023px) {
     .header__logo {
-      max-width: 70px;
+      max-width: 80px;
     }
     .header__wrapper {
       gap: 12px;
@@ -130,13 +130,13 @@
   }
 
   @media (max-width: 767px) {
-    .header__wrapper {
+    &__wrapper {
       grid-template-columns: auto 1fr 45px;
     }
     &--mod .header__wrapper {
       max-width: 100%;
     }
-    .header__navigation {
+    &__navigation {
       display: none;
     }
     .button-menu {
@@ -145,5 +145,6 @@
     .header__contacts {
       margin-left: auto;
     }
+
   }
 }

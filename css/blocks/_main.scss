@@ -2,6 +2,13 @@
   min-height: calc(100vh - 88px);
   padding-top: 126px;
   &--normal {
-    padding-top: 0;
+    padding-top: 0 !important;
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 96px;
+  }
+
+  @media (max-width: 767px) {
   }
 }

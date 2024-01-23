@@ -1,0 +1,32 @@
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3e%3cpath d='M20.1214 0H20.0486C3.91803 0 0.0607165 3.82235 0 19.8482C0.0607165 36.287 3.72374 40 19.9757 40C36.3005 40 39.9393 36.287 40 19.8482C39.9271 3.64014 36.2884 0 20.1214 0Z' fill='%23FE7F00'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  svg {
+    z-index: 2;
+    position: relative;
+    max-width: 22px;
+  }
+  &:hover::before {
+    scale: 1.15;
+  }
+}

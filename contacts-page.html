@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
-<body class="simple-page">
+<body class="contacts-page">
 
   <header class="header">
     <div class="wrapper">
@@ -126,19 +126,13 @@
 
   <main class="main">
 
-    <section class="hero hero--static">
+    <section class="hero hero--contacts">
       <div class="wrapper">
-        <div class="hero__image-bg">
-          <picture>
-            <!-- Используем разные изображения для разных разрешений экрана -->
-            <source media="(max-width: 767px)" srcset="./img/hero/about-375.jpg">
-            <source media="(max-width: 1023px)" srcset="./img/hero/about-768.jpg">
-            <source media="(max-width: 1399px)" srcset="./img/hero/about-1024.jpg">
-            <source media="(max-width: 1600px)" srcset="./img/hero/about-1400.jpg">
-
-            <!-- Fallback для браузеров, которые не поддерживают элемент <picture> -->
-              <img src="./img/hero/about.jpg" alt="фото">
-          </picture>
+        <div class="map">
+          <img src="./img/map/1.jpg" alt="карта с адресом Южный фректы"
+            title="350056 , Краснодарский край, город Краснодар, п. Индустриальный, Перспективная территория, д. 699, помещение 8."
+            loading="lazy" width="1920">
+          <div class="map__content js-map"></div>
         </div>
 
       </div>
@@ -148,90 +142,93 @@
       <div class="wrapper">
         <div class="content">
 
-          <h1 class="title">О компании</h1>
-
-          <div class="about__video">
-            <div class="video">
-              <img class="video__preview" src="./img/video.jpg" alt="привью видео" loading="lazy" width="1248">
-              <button class="play-button" type="button">
-                <svg viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.4223 11.7111L4.89443 2.44721C3.56463 1.78231 2 2.7493 2 4.23607L2 22.7639C2 24.2507 3.56462 25.2177 4.89443 24.5528L23.4223 15.2889C24.8964 14.5518 24.8964 12.4482 23.4223 11.7111Z" stroke="white" stroke-width="4"></path>
+          <h1 class="title">Контакты</h1>
+          <ul class="contacts-list list-reset">
+            <li class="contacts-list__item contacts-list__item--mod">
+              <div class="icon">
+                <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9 11.9656C10.6569 11.9656 12 10.6224 12 8.96558C12 7.30872 10.6569 5.96558 9 5.96558C7.34315 5.96558 6 7.30872 6 8.96558C6 10.6224 7.34315 11.9656 9 11.9656Z"
+                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M1 9.27586C1 4.7051 4.5816 1 9 1C13.4184 1 17 4.7051 17 9.27586C17 16.2433 10.6 18.0326 9 25C7.4 18.0326 1 16.2433 1 9.27586Z"
+                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
 
-              </button>
-            </div>
-          </div>
-          <h2>Мы разработали уникальный формат работы с клиентами, основная цель нашей компании долгосрочная работа на взаимовыгодных условиях</h2>
+              </div>
+              <span>Адрес:</span>
+              350056 , Краснодарский край, город Краснодар, п. Индустриальный, Перспективная территория, д. 699,
+              помещение 8.
+            </li>
+            <li class="contacts-list__item">
+              <div class="icon">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.90204 17.098C14.5102 22.7061 19.8664 23.8922 21.8429 24C23.1065 22.149 23.6402 20.6208 24 19.2551C22.6338 17.9248 20.6458 16.5679 18.8235 15.8041L16.6663 17.9607C15.9296 17.7634 13.9073 16.9272 11.4903 14.5097C9.07282 12.0922 8.23662 10.0704 8.03929 9.33368L10.1959 7.17653C9.43209 5.35418 8.07521 3.36625 6.74489 2C5.37864 2.35926 3.85099 2.89348 2 4.15715C2.10778 6.13415 3.29439 11.4898 8.90204 17.098Z"
+                    stroke="white" stroke-width="2" stroke-miterlimit="10" />
+                </svg>
+              </div>
+              <span>Телефон:</span>
+              <a href="tel:+78612031487">+7 (861) 203-14-87</a>
+            </li>
+            <li class="contacts-list__item">
+              <div class="icon">
+                <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23 15.9677C23 16.5375 22.552 17 22 17H2C1.448 17 1 16.5375 1 15.9677V2.03226C1 1.46245 1.448 1 2 1H22C22.552 1 23 1.46245 23 2.03226V15.9677Z"
+                    stroke="white" stroke-width="2" stroke-miterlimit="10" />
+                  <path d="M22.5 1.54834L14.4745 9.79995C13.108 11.2105 10.8915 11.2105 9.525 9.79995L1.5 1.54834"
+                    stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" />
+                  <path d="M1.5 16.5L7.5 10.2903" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                    stroke-linecap="round" />
+                  <path d="M22.5 16.5L16.5 10.2903" stroke="white" stroke-width="2" stroke-miterlimit="10"
+                    stroke-linecap="round" />
+                </svg>
 
-          <p>Напиток, получаемый смешиванием нескольких компонентов. Чаще всего коктейли представляют собой либо комбинацию спиртных напитков, либо один или несколько спиртных напитков, смешанных с другими ингредиентами, такими как фруктовый сок, ароматизированный сироп или сливки. Коктейли сильно различаются в разных регионах мира, и многие веб-сайты публикуют как оригинальные рецепты, так и свои собственные интерпретации старых и более известных коктейлей.</p>
-
-          <div class="advantages">
-            <ul class="advantages__list">
-              <li class="advantages__item">
-                <span class="advantages__icon">
-                  <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 6.45508L20 26.4551" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M39 6.45508L20 26.4551" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M20 26.4551V46.4551" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M14 46.4551H26" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M21.5 18.4551C23.433 18.4551 25 16.8881 25 14.9551C25 13.0221 23.433 11.4551 21.5 11.4551C19.567 11.4551 18 13.0221 18 14.9551C18 16.8881 19.567 18.4551 21.5 18.4551Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M34.245 1L23.805 12.321" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M6.7 12.4551H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M29 12.4551H33.3" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                  </svg>
-                </span>
-                <span>Пример преимущества</span>
-              </li>
-              <li class="advantages__item">
-                <span class="advantages__icon">
-                  <svg viewBox="0 0 36 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.224 7H22" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M27 7H34.777" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M1 1V5C1 9.971 4.029 14 9 14H9.23C10.164 14 10.967 14.648 11.174 15.558C11.882 18.674 14.669 21 18 21C21.331 21 24.118 18.674 24.826 15.558C25.033 14.648 25.836 14 26.77 14H27C31.971 14 35 9.971 35 5V1H1Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M18 21V40" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M12 40H24" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                  </svg>
-
-                </span>
-                <span>Пример преимущества</span>
-              </li>
-              <li class="advantages__item">
-                <span class="advantages__icon">
-                  <svg viewBox="0 0 39 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 47.0291H12C10.343 47.0291 9 45.6861 9 44.0291V15.0291H27V44.0291C27 45.6861 25.657 47.0291 24 47.0291Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M28.625 2.85693L37.162 13.8169L34.562 14.9299L32.148 12.8859L29.92 13.0709L28.436 11.3989L25.278 11.2119L22.865 9.16794L20.637 9.35193L19.152 7.67993L15.996 7.49294L14.883 4.89293L28.625 2.85693Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M25.278 11.2119L19 28.0289" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M28.625 2.85701L29.369 1" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M19.0003 34.0266L16.0001 31.0264L12.9999 34.0266L16.0001 37.0268L19.0003 34.0266Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M20 42.0291L21 43.0291L24 40.0291L21 37.0291L20 38.0291" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M13.593 38.4351L12 40.0291L15 43.0291L18 40.0291" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M20 23.0291H9" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M24 23.0291H27" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9 19.6871C8.375 19.9091 7.701 20.0291 7 20.0291C3.687 20.0291 1 17.3421 1 14.0291C1 10.7161 3.687 8.02905 7 8.02905C10.313 8.02905 13 10.7161 13 14.0291C13 14.3651 12.972 14.695 12.919 15.015" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-
-                </span>
-                <span>Пример преимущества</span>
-              </li>
-              <li class="advantages__item">
-                <span class="advantages__icon">
-                  <svg viewBox="0 0 28 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 10C3.842 15.095 1 20.986 1 27C1 33.39 8.091 38 14 38C19.909 38 27 33.39 27 27C27 20.986 24.158 15.095 21 10H7Z" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M5 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M23 47H14" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M14 38V47" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
-                    <path d="M17.776 34.167L12 3L4 1" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M2.50299 19H11.333" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M14.966 19H25.498" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M14 29.98L9.29199 27.75C8.46599 30.5 9.04199 32.589 11.291 33.91C12.283 34.493 13.401 34.67 14.456 34.491" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M5.71399 27.313L7.009 23.405L11.217 24.799" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M20.25 29.916L23.267 28.916L21.379 23.2209L18.815 24" stroke="white" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-
-                </span>
-                <span>Пример преимущества</span>
-              </li>
-            </ul>
+              </div>
+              <span>E-mail:</span>
+              <a href="mailto:info@southfruits.ru">info@southfruits.ru</a>
+            </li>
+          </ul>
+          <h2 class="title title--two">Написать сообщение</h2>
+          <div class="form">
+            <form action="" method="post">
+              <div class="form__body">
+                <div class="form__grid">
+                  <div class="form__group">
+                    <div class="form__item">
+                      <label for="user-name" class="visually-hidden">Ваше имя</label>
+                      <input type="text" name="" id="user-name" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__item">
+                      <label for="user-phone" class="visually-hidden">Телефон</label>
+                      <input type="tel" name="" id="user-phone" placeholder="Телефон">
+                    </div>
+                    <div class="form__item">
+                      <label for="user-email" class="visually-hidden">E-mail</label>
+                      <input type="email" name="" id="user-email" placeholder="E-mail">
+                    </div>
+                    <div class="form__item form__item--mod">
+                      <label for="" class="visually-hidden">Комментарий</label>
+                      <textarea name="" id="" cols="30" rows="5" placeholder="Комментарий"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__footer">
+                <div class="capcha">
+                  <img src="./img/capcha.jpg" alt="просто для рыбы">
+                </div>
+                <div class="form__confurm">
+                  <input class="visually-hidden" type="checkbox" name="" id="user-confurm">
+                  <label for="user-confurm"><span>Даю согласие на обработку <a href="#">персональных
+                        данных</a></span></label>
+                </div>
+                <button class="button" type="submit"><span>отправить</span></button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -269,6 +266,11 @@
   <script src="./libs/swiper-bundle.min.js"></script>
   <script src="./libs/fslightbox.min.js"></script>
   <script src="./js/sliders.js"></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=1dba075a-a65a-4b22-84a2-ebb26f26fe43&lang=ru_RU"
+    type="text/javascript"></script>
+  <script src="./js/map.js"></script>
+
   <script src="./js/main.js"></script>
 </body>
 

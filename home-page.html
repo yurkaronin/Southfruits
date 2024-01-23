@@ -13,6 +13,7 @@
 </head>
 
 <body class="home-page">
+
   <header class="header header--mod">
     <div class="wrapper">
       <div class="header__wrapper">
@@ -125,56 +126,159 @@
 
   <main class="main main--normal">
 
-    <section class="hero">
-      <div class="hero__slider hero-slider">
-        <!-- Swiper -->
-        <div class="swiper">
-          <div class="swiper-wrapper">
+    <section class="hero-slider">
 
-            <div class="swiper-slide hero-slider__item" style="background-image: url(./img/hero-slider/1.jpg);">
-            </div>
-            <div class="swiper-slide hero-slider__item" style="background-image: url(./img/hero-slider/2.jpg);">
-            </div>
-            <div class="swiper-slide hero-slider__item" style="background-image: url(./img/hero-slider/3.jpg);">
-            </div>
-          </div>
-          <div class="hero-slider__footer">
+      <!-- Swiper -->
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- слайд 1  -->
+          <div class="swiper-slide hero-slider__item">
             <div class="wrapper">
-              <div class="hero-slider__footer-grid">
-                <a class="link-promo" href="#scroll-to">
-                  <span class="button-custom button-custom--yellow">
-                    <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17 1L9 9L1 0.999999" stroke="#CC1E4B" stroke-width="2" />
-                    </svg>
+              <div class="hero-slider__image">
+                <picture>
+                  <!-- Для экранов с шириной больше или равной 1600px -->
+                  <source media="(min-width: 1600px)" srcset="./img/hero-slider/1.jpg">
 
-                  </span>
-                  <span class="link-promo__label">скрольте вниз</span>
-                </a>
-                <div class="hero-slider__navigation">
-                  <div class="hero-slider__pagination swiper-pagination">1 из 3</div>
-                  <div class="hero-slider__buttons">
-                    <button class="button-custom swiper-button-prev" type="button">
-                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 1L2 9L10 17" stroke="#CC1E4B" stroke-width="2" />
-                      </svg>
+                  <!-- Для экранов с шириной больше или равной 1400px (но менее 1600px) -->
+                  <source media="(min-width: 1400px)" srcset="./img/hero-slider/1-1376.jpg">
 
-                    </button>
-                    <button class="button-custom swiper-button-next">
-                      <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L9 9L1 17" stroke="#CC1E4B" stroke-width="2" />
-                      </svg>
+                  <!-- Для экранов с шириной больше или равной 1024px (но менее 1400px) -->
+                  <source media="(min-width: 1024px)" srcset="./img/hero-slider/1-1013.jpg">
 
-                    </button>
-                  </div>
+                  <!-- Для экранов с шириной больше или равной 768px (но менее 1024px) -->
+                  <source media="(min-width: 768px)" srcset="./img/hero-slider/1-768.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 375px (но менее 768px) -->
+                  <source media="(min-width: 200px)" srcset="./img/hero-slider/1-375.jpg">
+
+                  <!-- Fallback для браузеров, которые не поддерживают элемент <picture> -->
+                  <img src="./img/promo-card/1.jpg" alt="фото товара">
+                </picture>
+
+              </div>
+              <div class="hero-slider__grid">
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-left.svg" alt="">
+                </div>
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-right.svg" alt="">
+                  <a href="#" class="button"><span>смотреть 1 вкус</span></a>
                 </div>
               </div>
-
             </div>
+
           </div>
+          <!-- слайд 2  -->
+          <div class="swiper-slide hero-slider__item">
+            <div class="wrapper">
+              <div class="hero-slider__image">
+                <picture>
+                  <!-- Для экранов с шириной больше или равной 1600px -->
+                  <source media="(min-width: 1600px)" srcset="./img/hero-slider/2.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 1400px (но менее 1600px) -->
+                  <source media="(min-width: 1400px)" srcset="./img/hero-slider/2-1376.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 1024px (но менее 1400px) -->
+                  <source media="(min-width: 1024px)" srcset="./img/hero-slider/2-1013.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 768px (но менее 1024px) -->
+                  <source media="(min-width: 768px)" srcset="./img/hero-slider/2-768.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 375px (но менее 768px) -->
+                  <source media="(min-width: 200px)" srcset="./img/hero-slider/2-375.jpg">
+
+                  <!-- Fallback для браузеров, которые не поддерживают элемент <picture> -->
+                  <img src="./img/promo-card/2.jpg" alt="фото товара">
+                </picture>
+
+              </div>
+              <div class="hero-slider__grid">
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-left.svg" alt="">
+                </div>
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-right.svg" alt="">
+                  <a href="#" class="button"><span>смотреть 1 вкус</span></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- слайд 3  -->
+          <div class="swiper-slide hero-slider__item">
+            <div class="wrapper">
+              <div class="hero-slider__image">
+                <picture>
+                  <!-- Для экранов с шириной больше или равной 1600px -->
+                  <source media="(min-width: 1600px)" srcset="./img/hero-slider/3.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 1400px (но менее 1600px) -->
+                  <source media="(min-width: 1400px)" srcset="./img/hero-slider/3-1376.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 1024px (но менее 1400px) -->
+                  <source media="(min-width: 1024px)" srcset="./img/hero-slider/3-1013.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 768px (но менее 1024px) -->
+                  <source media="(min-width: 768px)" srcset="./img/hero-slider/3-768.jpg">
+
+                  <!-- Для экранов с шириной больше или равной 375px (но менее 768px) -->
+                  <source media="(min-width: 200px)" srcset="./img/hero-slider/3-375.jpg">
+
+                  <!-- Fallback для браузеров, которые не поддерживают элемент <picture> -->
+                  <img src="./img/promo-card/3.jpg" alt="фото товара">
+                </picture>
+
+              </div>
+              <div class="hero-slider__grid">
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-left.svg" alt="">
+                </div>
+                <div class="hero-slider__grid-item">
+                  <img src="./img/hero-slider/logo-right.svg" alt="">
+                  <a href="#" class="button"><span>смотреть 1 вкус</span></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
+      <!-- Навигация слайдера  -->
+      <div class="hero-slider__footer">
+        <div class="wrapper">
+          <div class="hero-slider__footer-grid">
+            <a class="link-promo" href="#scroll-to">
+              <span class="button-custom button-custom--yellow">
+                <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 1L9 9L1 0.999999" stroke="#CC1E4B" stroke-width="2" />
+                </svg>
 
+              </span>
+              <span class="link-promo__label">скрольте вниз</span>
+            </a>
+            <div class="hero-slider__navigation">
+              <div class="hero-slider__pagination swiper-pagination">1 из 3</div>
+              <div class="hero-slider__buttons">
+                <button class="button-custom swiper-button-prev" type="button">
+                  <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 1L2 9L10 17" stroke="#CC1E4B" stroke-width="2" />
+                  </svg>
 
+                </button>
+                <button class="button-custom swiper-button-next">
+                  <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L9 9L1 17" stroke="#CC1E4B" stroke-width="2" />
+                  </svg>
+
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
     </section>
 

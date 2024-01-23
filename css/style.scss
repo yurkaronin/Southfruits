@@ -18,13 +18,15 @@
 @import "blocks/link-promo";
 @import "blocks/form";
 @import "blocks/navigation";
-@import "blocks/hero-slider";
 @import "blocks/product-features";
 @import "blocks/video";
 @import "blocks/advantages";
 @import "blocks/marker";
 @import "blocks/faq";
 @import "blocks/accordion";
+
+@import "blocks/contacts-list";
+@import "blocks/icon";
 
 @import "sections/header";
 @import "sections/footer";
@@ -35,10 +37,12 @@
 @import "sections/product-details";
 @import "sections/faq-section";
 @import "sections/photo-slider";
+@import "sections/map";
+@import "sections/hero-slider";
 
 @import "pages/inner-page";
 @import "pages/simple-page";
-@import "pages/home-page";
+@import "pages/contacts-page";
 
 @import "activity/header-sticky";
 @import "activity/menu-open";

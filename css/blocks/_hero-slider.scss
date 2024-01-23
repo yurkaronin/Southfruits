@@ -87,3 +87,13 @@
     right: initial;
   }
 }
+
+
+// Новые стили
+.hero--contacts {
+  min-height: initial;
+  z-index: 1;
+  .wrapper {
+    display: contents;
+  }
+}

@@ -1,0 +1,38 @@
+.map {
+  position: relative;
+  img {
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    position: absolute;
+    z-index: 0;
+  }
+  &__content {
+    position: relative;
+    z-index: 10;
+    height: 960px;
+    width: 100%;
+  }
+  [class*="copyrights-pane"] {
+    display: none !important;
+  }
+
+  @media (max-width: 1600px) {
+    &__content {
+      height: 768px;
+    }
+  }
+  @media (max-width: 1023px) {
+    &__content {
+      height: 647px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__content {
+      height: 400px;
+    }
+  }
+}
