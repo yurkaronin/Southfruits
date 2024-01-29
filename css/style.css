@@ -2158,34 +2158,28 @@ input[type=radio].visually-hidden {
   margin-bottom: 12px;
 }
 @media (max-width: 1600px) {
-  .hero-slider__grid {
-    grid-template-columns: repeat(2, 305px);
+  .hero-slider {
+    height: initial;
+    min-height: 896px;
   }
 }
 @media (max-width: 1399px) {
   .hero-slider {
-    height: 1024px;
-  }
-  .hero-slider__grid {
-    grid-template-columns: repeat(2, 210px);
+    min-height: 768px;
   }
 }
 @media (max-width: 1023px) {
+  .hero-slider {
+    min-height: 768px;
+  }
   .hero-slider__image img {
     object-position: bottom;
   }
-  .hero-slider__grid {
-    max-width: max-content;
-    margin: 0 auto;
-    position: relative;
-    justify-content: center;
-    grid-template-columns: 1fr;
-  }
-  .hero-slider__grid-item img {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
+  .hero-slider {
+    min-height: 665px;
+  }
   .hero-slider__footer {
     bottom: 20px;
   }
