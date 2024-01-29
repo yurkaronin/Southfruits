@@ -17,14 +17,14 @@
 
   &::before {
     content: "";
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     display: block;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     pointer-events: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='45' height='45' viewBox='0 0 45 45' fill='none'%3e%3cpath d='M22.6366 0H22.5546C4.40779 0 0.068306 4.30014 0 22.3292C0.068306 40.8228 4.18921 45 22.4727 45C40.8381 45 44.9317 40.8228 45 22.3292C44.918 4.09516 40.8245 0 22.6366 0Z' fill='%23CC1E4B'/%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -63,7 +63,21 @@
 
   &.button-custom:hover::before {
     scale: 1.15;
-}
+  }
+
+  @media (max-width: 767px) {
+    & span,
+    & span::after,
+    & span::before {
+      width: 18px;
+    }
+    span::before {
+      transform: translateY(-6px);
+    }
+    span::after {
+      transform: translateY(6px);
+    }
+  }
 
   @media (max-width: 374px) {
     width: 45px;
