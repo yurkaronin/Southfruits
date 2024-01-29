@@ -124,6 +124,31 @@
     }
   }
 
+  .home-slider__photo-slide .swiper-slide {
+    position: relative;
+    transform-origin: 0%;
+    transition: all 0.3s;
+  }
+
+  @keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  &__image img {
+    transition: all 45000ms;
+  }
+
+  .swiper-slide-active &__image img {
+    transform-origin: center;
+    animation: grow 45000ms ease;
+  }
+
   @media (max-width: 1600px) {
     &__grid {
       min-height: 896px;
