@@ -123,6 +123,7 @@
       grid-column-end: 13;
     }
   }
+
   @media (max-width: 1600px) {
     &__grid {
       min-height: 896px;
@@ -202,7 +203,7 @@
     }
     &__grid-item.hide {
       margin-top: 0;
-  }
+    }
   }
 
   @media (max-width: 767px) {

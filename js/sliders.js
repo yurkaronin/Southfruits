@@ -1,18 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-if(document.querySelector('.hero-slider .swiper')) {
-  console.log('Есть!');
-  var swiperHero = new Swiper(".hero-slider .swiper", {
-    pagination: {
-      el: ".hero-slider .swiper-pagination",
-      type: "fraction",
-    },
-    navigation: {
-      nextEl: ".hero-slider .swiper-button-next",
-      prevEl: ".hero-slider .swiper-button-prev",
-    },
-  });
-};
+  if (document.querySelector('.hero-slider .swiper')) {
+    var swiperHero = new Swiper(".hero-slider .swiper", {
+      pagination: {
+        el: ".hero-slider .swiper-pagination",
+        type: "fraction",
+      },
+      loop: true,
+      speed: 600,
+      parallax: true,
+      navigation: {
+        nextEl: ".hero-slider .swiper-button-next",
+        prevEl: ".hero-slider .swiper-button-prev",
+      },
+
+
+    });
+  }
+
 
 var swiperPhoto = new Swiper(".photo-slider .swiper", {
   slidesPerView: 1,
