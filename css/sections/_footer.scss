@@ -57,9 +57,22 @@
   .navigation {
     justify-content: center;
   }
+
   @media (max-width: 1600px) {
     &__wrapper {
       grid-template-columns: 195px 1fr 195px;
+    }
+    &__link {
+      display: grid;
+      gap: 0 16px;
+      grid-template-columns: 130px 48px;
+
+      svg {
+        grid-column: 2;
+        grid-row: 1;
+        margin: 0;
+        margin-bottom: -26px;
+      }
     }
   }
 
@@ -100,6 +113,24 @@
     &__link div {
       display: block;
     }
+    .footer__link {
+      display: block;
+      position: relative;
+      padding-left: calc(48px + 16px);
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      svg {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .navigation {
+      justify-content: flex-start;
+      margin-left: -16px;
+  }
   }
 
   @media (max-width: 767px) {
@@ -131,5 +162,8 @@
     .navigation a:before {
       display: none;
     }
+    .navigation {
+      margin-left: 0;
+  }
   }
 }
