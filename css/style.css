@@ -1862,6 +1862,13 @@ input[type=radio].visually-hidden {
   .about .content::after {
     display: none;
   }
+  .about .video {
+    height: 768px;
+    border-radius: 0;
+  }
+  .about .content {
+    margin-top: -130px;
+  }
 }
 @media (max-width: 767px) {
   .about .content {
