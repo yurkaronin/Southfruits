@@ -25,6 +25,10 @@ if (document.querySelector('.hero-slider .swiper')) {
       type: "fraction",
     },
     loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     speed: 600,
     // Отключите встроенную анимацию Swiper
     effect: "fade",

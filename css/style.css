@@ -1437,11 +1437,10 @@ input[type=radio].visually-hidden {
   display: grid;
   gap: 32px;
   align-items: center;
-  grid-template-columns: 3fr 6fr 3fr;
+  grid-template-columns: 350px 1fr 260px;
 }
 .footer__text {
   color: var(--White, #fff);
-  text-align: right;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1455,6 +1454,9 @@ input[type=radio].visually-hidden {
 }
 .footer__text b {
   font-weight: 700;
+}
+.footer__text--mod {
+  text-align: right;
 }
 .footer__link {
   display: flex;
@@ -1471,6 +1473,14 @@ input[type=radio].visually-hidden {
 .footer__link:hover span, .footer__link:active span, .footer__link:focus span {
   text-decoration: underline;
 }
+.footer .navigation {
+  justify-content: center;
+}
+@media (max-width: 1600px) {
+  .footer__wrapper {
+    grid-template-columns: 195px 1fr 195px;
+  }
+}
 @media (max-width: 1439px) {
   .footer__link div {
     display: grid;
@@ -1482,6 +1492,10 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 1023px) {
+  .footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
   .footer__wrapper {
     grid-template-columns: 1fr;
   }
@@ -1503,6 +1517,10 @@ input[type=radio].visually-hidden {
   }
 }
 @media (max-width: 767px) {
+  .footer {
+    padding-top: 25px;
+    padding-bottom: 30px;
+  }
   .footer .navigation {
     flex-direction: column;
     align-items: flex-start;
@@ -2333,6 +2351,17 @@ input[type=radio].visually-hidden {
     margin-left: -20px;
     margin-right: -20px;
     width: calc(100% + 40px);
+  }
+}
+
+.main-faq {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .main-faq {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
 

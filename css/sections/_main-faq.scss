@@ -1,0 +1,8 @@
+.main-faq {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  @media (max-width: 767px) {
+    padding-top: 50px;
+  padding-bottom: 50px;
+  }
+}
