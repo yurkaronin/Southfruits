@@ -1870,9 +1870,22 @@ input[type=radio].visually-hidden {
     margin-top: -130px;
   }
 }
+@media (max-width: 1023px) {
+  .about .video {
+    height: 576px;
+  }
+  .about .content {
+    margin-top: -70px;
+    padding: 50px 65px;
+  }
+}
 @media (max-width: 767px) {
   .about .content {
     padding: 30px 25px;
+    margin-top: -32px;
+  }
+  .about .video {
+    height: 280px;
   }
 }
 

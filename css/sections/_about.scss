@@ -73,10 +73,23 @@
       margin-top: -130px;
     }
   }
+  @media (max-width: 1023px) {
+    .video {
+      height: 576px;
+    }
+    .content {
+      margin-top: -70px;
+      padding: 50px 65px;
+    }
+  }
 
   @media (max-width: 767px) {
     .content {
       padding: 30px 25px;
+      margin-top: -32px;
     }
+    .video {
+      height: 280px;
+  }
   }
 }
