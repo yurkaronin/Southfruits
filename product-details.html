@@ -193,7 +193,7 @@
             системы, почек, печени и других органов пищеварения. Содержание вредных для здоровья человека веществ не
             превышает допустимых уровней, установленых Техническим регламентом Таможенного союза ТР ТС 021/2011 “О
             безопасности пищевой продукции”.</p>
-          <a href="" class="button to-right"><span>Заказать образец</span></a>
+          <a href="" class="button to-right" data-target="modal-one"><span>Заказать образец</span></a>
         </div>
       </div>
     </section>
@@ -393,10 +393,67 @@
     </div>
   </footer>
 
+  <!-- Диалоговое окно Заказать образец -->
+  <section class="modal" id="modal-one">
+    <div class="wrapper">
+      <div class="modal__body">
+        <h3 class="modal__title">Заказать образец</h3>
+        <p class="modal__text">Заполните простую форму и мы вышлем образец в ближайшее время</p>
+
+
+        <div class="form">
+          <form action="" method="post">
+            <div class="form__body">
+              <div class="form__grid">
+                <div class="form__group">
+                  <div class="form__item">
+                    <label for="user-name" class="visually-hidden">Ваше имя</label>
+                    <input type="text" name="" id="user-name" placeholder="Ваше имя">
+                  </div>
+                  <div class="form__item">
+                    <label for="user-phone" class="visually-hidden">Телефон</label>
+                    <input type="tel" name="" id="user-phone" placeholder="Телефон">
+                  </div>
+
+                  <div class="form__item form__item--mod">
+                    <label for="" class="visually-hidden">Комментарий</label>
+                    <textarea name="" id="" cols="30" rows="5" placeholder="Комментарий"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="capcha">
+              <img src="./img/capcha.jpg" alt="просто для рыбы">
+            </div>
+            <div class="form__footer">
+
+              <div class="form__confurm">
+                <input class="visually-hidden" type="checkbox" name="" id="user-confurm">
+                <label for="user-confurm"><span>Даю согласие на обработку <a href="#">персональных
+                      данных</a></span></label>
+              </div>
+              <button class="button" type="submit"><span>отправить</span></button>
+            </div>
+          </form>
+        </div>
+        <!-- Кнопка закрытия окна  -->
+        <button class="button-custom modal__close js-close-modal" type="button">
+          <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L16 16" stroke="white" stroke-width="2" />
+            <path d="M16 1L1 16" stroke="white" stroke-width="2" />
+          </svg>
+
+        </button>
+      </div>
+    </div>
+  </section>
+
+
   <script src="./libs/swiper-bundle.min.js"></script>
   <script src="./libs/fslightbox.min.js"></script>
   <script src="./js/sliders.js"></script>
   <script src="./js/main.js"></script>
+  <script src="./js/modals.js"></script>
 </body>
 
 </html>

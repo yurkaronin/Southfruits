@@ -1,0 +1,148 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.5s,
+    visibility 0.5s;
+  background-color: rgba(0, 0, 0, 0.73);
+  z-index: 9999;
+  &__title {
+    display: block;
+    margin: 0;
+    font-family: var(--Bebas);
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--Orange);
+  }
+  &__text {
+    display: block;
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--Dark);
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 42px;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: var(--Line-mod, #d4d4d4);
+    }
+  }
+
+  &__text--mod {
+    padding: 0;
+    &::after {
+      display: none;
+    }
+  }
+  .form__group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .form__item--mod {
+    grid-column: span 2;
+  }
+  .form__footer {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.modal {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+}
+
+.modal__body {
+  max-width: 880px;
+  padding: 32px 48px 48px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 48px;
+  background: #fff;
+  position: relative;
+}
+
+.to-right {
+  max-width: max-content;
+  margin-left: auto;
+}
+
+.modal__close {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: -24px;
+  right: 48px;
+  padding: 0;
+
+  svg {
+    pointer-events: none;
+  }
+  &::before {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M24.1457 0H24.0583C4.70164 0 0.0728597 4.58682 0 23.8178C0.0728597 43.5444 4.46849 48 23.9709 48C43.5607 48 47.9271 43.5444 48 23.8178C47.9126 4.36817 43.5461 0 24.1457 0Z' fill='%23FFB00B'/%3e%3c/svg%3e ");
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.modal.active {
+  pointer-events: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .modal {
+    &__title {
+      font-size: 35px;
+    }
+    &__text {
+      margin-bottom: 23px;
+    }
+    .form__group {
+      grid-template-columns: 1fr;
+    }
+    .form__item--mod {
+      grid-column: initial;
+    }
+    .capcha {
+      max-width: max-content;
+      margin-inline: auto;
+      margin-bottom: 16px;
+    }
+    .form__footer {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    &__body {
+      padding: 26px 32px 32px;
+    }
+  }
+}

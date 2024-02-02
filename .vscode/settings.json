@@ -1,3 +1,7 @@
 {
-  "liveServer.settings.port": 5502
+  "liveServer.settings.port": 5502,
+  "CodeGPT.query.language": "Russian",
+  "CodeGPT.Autocomplete.enabled": true,
+  "CodeGPT.Autocomplete.provider": "CodeGPT Plus - Plus",
+  "CodeGPT.apiKey": "OpenAI"
 }
