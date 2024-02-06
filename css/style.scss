@@ -48,3 +48,17 @@
 
 @import "activity/header-sticky";
 @import "activity/menu-open";
+
+// Диалоговое окно с проверкой возраста
+.button__grid {
+  display: grid;
+  max-width: max-content;
+  grid-template-columns: repeat(2, auto);
+  gap: 32px;
+}
+.modal--confirm {
+  pointer-events: initial;
+  visibility: visible;
+  opacity: 1;
+
+}
